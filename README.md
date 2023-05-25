@@ -11,9 +11,6 @@ This procedure is performed recursively in each subcube, splitting the subsequen
 
 <img width="695" alt="Screenshot 2023-01-14 at 11 57 45 AM" src="https://user-images.githubusercontent.com/56271967/212485147-783e7b6d-d569-4074-aae4-1db4a2e4bc3b.png">
 
-_Grama, Ananth. Introduction to Parallel Computing. Addison-Wesley, 2013._
-
-
 ## Time Complexity 
 
 The time complexity of the parallel quicksort algorithm on a d-dimensional hypercube topology is 
@@ -33,6 +30,18 @@ To run the program,
   mpirun -np <NumberOfProcesses> Par <InputSize>
 ```
   
+
+## Results 
+
+The execution time of the sequential quick sort algorithm is compared with the execution time of the parallel d-dimensional hypercube quick sort algorithm and the speedup is recorded. A graph of speedup against input size is shown below: 
+
+<img width="925" alt="Screenshot 2023-01-14 at 11 37 47 AM" src="https://user-images.githubusercontent.com/56271967/212483947-29802a0e-d5c8-4ccf-81f4-3318de33ff0c.png">
+
+
+## Acknowledgements
+
+This project has benefited greatly from numerous resources, both online and offline. I would like to express my special thanks to the book "Introduction to Parallel Computing" by Ananth Grama, published by Addison-Wesley in 2013. The concepts and insights presented in this book have been invaluable in developing this implementation of the parallel QuickSort algorithm.
+
 ## Contribute
 
 We appreciate all the help we can get! Feel free to issue pull requests or submit issues if you find something that could be improved.
@@ -41,9 +50,3 @@ We appreciate all the help we can get! Feel free to issue pull requests or submi
 
 This project is licensed under the MIT License. See the LICENSE.md file for details.
 
-
-## Results 
-
-The execution time of the sequential quick sort algorithm is compared with the execution time of the parallel d-dimensional hypercube quick sort algorithm and the speedup is recorded. A graph of speedup against input size is shown below: 
-
-<img width="925" alt="Screenshot 2023-01-14 at 11 37 47 AM" src="https://user-images.githubusercontent.com/56271967/212483947-29802a0e-d5c8-4ccf-81f4-3318de33ff0c.png">
