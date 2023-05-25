@@ -1,5 +1,6 @@
 # Hyper-QuickSort
-This is an implementation of a parallel quicksort algorithm on a d-dimensional hypercube topology using MPI and C programming language.
+
+This project provides an implementation of the QuickSort algorithm, designed to run in parallel on a d-dimensional hypercube topology. We utilize the Message Passing Interface (MPI) for inter-process communication, and the code is written in the C programming language.
 
 ## Motivation
 
