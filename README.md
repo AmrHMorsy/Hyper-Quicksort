@@ -1,6 +1,17 @@
 # Hyper-QuickSort
 This is an implementation of a parallel quicksort algorithm on a d-dimensional hypercube topology using MPI and C programming language.
 
+## Motivation
+
+The motivation behind this project is to explore the potentials of parallel sorting algorithms in a structured network topology, such as a d-dimensional hypercube. By utilizing MPI and C, this project aims to demonstrate the performance gains that can be achieved through parallel sorting, and how these gains scale with the dimensionality of the hypercube.
+
+## Features
+
+- QuickSort algorithm implementation
+- MPI for effective inter-process communication
+- Parallel execution in a d-dimensional hypercube topology
+- Written in the versatile and efficient C language
+
 ## Implementation 
 
 This parallel quicksort algorithm takes advantage of the topology of a p process hypercube connected parallel computer. Let n be the number of elements to be sorted and $p = 2^d$ be the number of processes in a d -dimensional hypercube. Each process is assigned a block of $n \over p$ elements, and the labels of the processes define the global order of the sorted sequence. 
@@ -11,6 +22,36 @@ This procedure is performed recursively in each subcube, splitting the subsequen
 
 <img width="695" alt="Screenshot 2023-01-14 at 11 57 45 AM" src="https://user-images.githubusercontent.com/56271967/212485147-783e7b6d-d569-4074-aae4-1db4a2e4bc3b.png">
 
+
+## Project Setup 
+
+### Prerequisites
+
+Before running the program, ensure you have the following installed:
+
+- An MPI implementation (e.g., OpenMPI or MPICH)
+- A C compiler (e.g., gcc)
+
+### Installation
+
+1. Clone the repository:
+```
+git clone [https://github.com/AmrHMorsy/](https://github.com/AmrHMorsy/Hyper-Quicksort.git)
+```
+2. Navigate to the project directory: 
+```
+cd Hyper-Quicksort
+```
+3. Compile the program, 
+```
+  mpicc Par.c -o Par
+```
+4. Run the program,
+```
+  mpirun -np <NumberOfProcesses> Par <InputSize>
+```
+
+  
 ## Time Complexity 
 
 The time complexity of the parallel quicksort algorithm on a d-dimensional hypercube topology is 
@@ -18,25 +59,12 @@ The time complexity of the parallel quicksort algorithm on a d-dimensional hyper
 $$ O( {N \over P} + {{N \over P} log {N \over P}} + {{N \over P} log P} + {log^2 P} ) = O( {{N \over P} log {N \over P}} ) $$
 
 
-## Build
-
-To compile the program, 
-```
-  mpicc Par.c -o Par
-```
-  
-To run the program,
-```
-  mpirun -np <NumberOfProcesses> Par <InputSize>
-```
-  
-
 ## Results 
 
 The execution time of the sequential quick sort algorithm is compared with the execution time of the parallel d-dimensional hypercube quick sort algorithm and the speedup is recorded. A graph of speedup against input size is shown below: 
 
-<img width="925" alt="Screenshot 2023-01-14 at 11 37 47 AM" src="https://user-images.githubusercontent.com/56271967/212483947-29802a0e-d5c8-4ccf-81f4-3318de33ff0c.png">
 
+<img width="965" alt="Screenshot 2023-05-24 at 23 28 32" src="https://github.com/AmrHMorsy/Hyper-Quicksort/assets/56271967/e87ef62d-f038-455d-a0d1-2c9cf7a8fa89">
 
 ## Acknowledgements
 
