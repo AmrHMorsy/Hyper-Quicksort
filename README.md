@@ -29,6 +29,15 @@ To run the program,
   mpirun -np <NumberOfProcesses> Par <InputSize>
 ```
   
+## Contribute
+
+We appreciate all the help we can get! Feel free to issue pull requests or submit issues if you find something that could be improved.
+
+## License
+
+This project is licensed under the MIT License. See the LICENSE.md file for details.
+
+
 ## Results 
 
 The execution time of the sequential quick sort algorithm is compared with the execution time of the parallel d-dimensional hypercube quick sort algorithm and the speedup is recorded. A graph of speedup against input size is shown below: 
